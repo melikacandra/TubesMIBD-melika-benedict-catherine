@@ -1,0 +1,58 @@
+.content{
+    margin-left: 5%;
+    width: 95%;
+    height: 100%;
+}
+body{
+    background-color: #9fc5f8;
+}
+
+.tempat{
+    background-color: whitesmoke;
+    margin: auto;
+    margin-top: 20px;
+    width: 700px;
+    height: 550px;
+}
+
+#foto{
+    font-size: 100px;
+    float: left;
+    margin-left: 12%;
+    margin-right: 20px;
+}
+#foto2{
+    font-size: 100px;
+    float: right;
+    margin-right: 12%;
+}
+.head-id p{
+    margin: 0;
+    text-align: left;
+    color: black;
+}
+p > u{
+    font-size: 25px;
+}
+.head-id{
+       padding-top: 40px;
+       height: 20%;
+}
+table{
+    margin-left: 8%;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.head-id2{
+    padding-top: 40px;
+    height: 20%;
+}
+th, td{
+    padding: 5px;
+}
+button{
+   margin-left: 80%;
+   background-color: #f9cb9c;
+   padding: 10px;
+}
