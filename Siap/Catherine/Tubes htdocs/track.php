@@ -26,7 +26,7 @@
 			<li><a href="profilePeserta.php">Profil</a></li>
 
 			<li><a class="fa fa-sign-out" href="#"></a></li>
-			<li><a href="#">Log in</a></li>
+			<li><a href="#">Log out</a></li>
 		</ul>
 
 		<div class="sebelah">
@@ -43,19 +43,23 @@
 		<div class="row">
 		  	<div class="column satu">
 		  		<div class="card">
-				  	<img src="assets/fuji.png">
-				 	<div class="container">
-				    	<p>Track Gunung Fuji, Jepang</p> 
-				  	</div>
+		  			<a href="trackOption1.php">
+					  	<img src="assets/fuji.png">
+					 	<div class="container">
+					    	<p>Track Gunung Fuji, Jepang</p> 
+					  	</div>
+					</a>
 				</div>
 			</div>
 
 			<div class="column">
 		  		<div class="card dua">
-				  	<a href="transaksi.php"><img src="assets/kiyomizu.jpg"></a>
-				 	<div class="container">
-				    	<p><a href="transaksi.php">Track Kiyomizu Dera, Jepang</a></p> 
-				  	</div>
+			  		<a href="trackOption2.php">
+					  	<img src="assets/kiyomizu.jpg">
+					 	<div class="container">
+					    	<p>Track Kiyomizu Dera, Jepang</p> 
+					  	</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -65,19 +69,23 @@
 		<div class="row">
 		  	<div class="column">
 		  		<div class="card">
-				  	<img src="assets/giza.jpg">
-				 	<div class="container">
-				    	<p>Track Piramida Giza, Mesir</p> 
-				  	</div>
+			  		<a href="trackOption3.php">
+					  	<img src="assets/giza.jpg">
+					 	<div class="container">
+					    	<p>Track Piramida Giza, Mesir</p> 
+					  	</div>
+					</a>
 				</div>
 			</div>
 
 			<div class="column">
 		  		<div class="card dua2">
-				  	<img src="assets/nil.jpg">
-				 	<div class="container">
-				    	<p>Track Sungai Nil, Mesir</p> 
-				  	</div>
+			  		<a href="trackOption4.php">
+					  	<img src="assets/nil.jpg">
+					 	<div class="container">
+					    	<p>Track Sungai Nil, Mesir</p> 
+					  	</div>
+					</a>
 				</div>
 			</div>
 		</div>

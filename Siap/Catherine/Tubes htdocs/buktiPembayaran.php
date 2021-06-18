@@ -65,22 +65,24 @@
 			        </div>
 
 			    	<b>Nama di Rekening/Akun</b>
-			    	<input type="text" class="form-control" placeholder="Benedict" name="nama">
+			    	<input type="text" class="form-control" placeholder="Nama" name="nama">
 			    	<br>
 
 			    	<table>
 			    		<tr>
 			    			<td>
-			    				<div class="upload">
-			    					<i class='fa fa-plus-circle'></i>
-			    					<p>Upload Bukti Pembayaran</p>
-			    				</div>
+			    				<form action="/action_page.php">
+									 <input type="file" id="myFile" name="filename">
+								</form>
 							</td>
-			    			<td><a href="terverifikasi.php"><button>Submit</button></a></td>
+			    			
+			    		</tr>
+			    		<tr>
+			    			<td><a href="menungguVerifikasi.php"><button>Submit</button></a></td>
 			    		</tr>
 			    	</table>
 
-			    	<br><br>
+			    	<br>
 			    </div>
 		  	</div>
 
@@ -106,7 +108,22 @@
 			    	<br><br>
 			    </div>
 			</div>
-			<button class="btn1"> Petunjuk Pembayaran</button>
+
+			<button class="btn1" id="myBtn"> Petunjuk Pembayaran</button>
+
+			<div id="myModal" class="modal">
+			  	<div class="modal-content">
+			   		<span class="close">&times;</span>
+		   			<h3><b>Petunjuk Pembayaran</b></h3>
+		    		<p>Langkah-langkah melakukan pembayaran: </p>
+			    	<p>1. Pilih Metode Pembayaran yang anda inginkan.</p>
+			    	<p>2. Transfer melalui nomor rekening/nomor akun yang ada dalam website.</p>
+			    	<p>3. Klik tombol "Saya Sudah Bayar", maka anda akan masuk ke dalam form bukti pembayaran.</p>
+			    	<p>4. Upload bukti pembayaran anda pada form tersebut.</p>
+			    	<p>5. Klik Submit dan tunggu hingga admin memverifikasi pembayaran anda.</p>
+			  	</div>
+			</div>
 		</div>
+		<script type="text/javascript" src="jsTataCaraPembayaran.js"></script>
 	</body>
 </html>

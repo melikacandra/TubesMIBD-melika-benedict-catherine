@@ -10,13 +10,12 @@ ul {
   background-color: #073763;
   position: fixed;
   height: 100%;
-  overflow: auto;
 }
 
 li a {
   display: block;
   color: white;
-  padding: 8px 15px;
+  padding: 8px 13px;
   text-decoration: none;
 }
 
@@ -101,10 +100,17 @@ h1{
   width: 112%;
 }
 
-.dua p a{
-  padding-left: 20px;
-  text-decoration: none;
+.card a p{
+  padding-left: 55px;
   color: black;
+}
+
+.card a{
+  text-decoration: none;
+}
+
+.dua a p {
+  padding-left: 75px;
 }
 
 .column .dua2{

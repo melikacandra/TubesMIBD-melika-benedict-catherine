@@ -11,13 +11,12 @@ ul {
   background-color: #073763;
   position: fixed;
   height: 100%;
-  overflow: auto;
 }
 
 li a {
   display: block;
   color: white;
-  padding: 8px 15px;
+  padding: 8px 13px;
   text-decoration: none;
 }
 
@@ -70,6 +69,10 @@ h1{
   float: left;
   width: 30%;
   padding: 0 10px;
+}
+
+.column a{
+  text-decoration: none;
 }
 
 .dua{

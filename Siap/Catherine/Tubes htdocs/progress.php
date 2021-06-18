@@ -21,7 +21,7 @@
 			<li><a class="fa fa-user-circle-o" href="#"></a></li>
 			<li><a href="#">Profil</a></li>
 			<li><a class="fa fa-sign-out" href="#"></a></li>
-			<li><a href="#">Log in</a></li>
+			<li><a href="#">Log out</a></li>
 		</ul>
 
 		
@@ -40,11 +40,13 @@
 
  		<div class="row">
 		  	<div class="column">
-		    	<div class="card">
-		      		<p>Kiyomizu Dera, Jepang</p>
-			      	<img src="assets/kiyomizu.jpg">
-			      	<h3>0 km &emsp; 0%</h3>
-		    	</div>
+		    	<a href="currentProgress.php">
+		    		<div class="card">
+			      		<p>Kiyomizu Dera, Jepang</p>
+				      	<img src="assets/kiyomizu.jpg">
+				      	<h3>0 km &emsp; 0%</h3>
+			    	</div>
+			    </a>
 			 </div>
 		</div>
 
