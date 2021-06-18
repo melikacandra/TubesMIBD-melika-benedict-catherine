@@ -26,7 +26,7 @@
 			<li><a href="#">Profil</a></li>
 
 			<li><a class="fa fa-sign-out" href="#"></a></li>
-			<li><a href="#">Log in</a></li>
+			<li><a href="#">Log out</a></li>
 		</ul>
 
 		

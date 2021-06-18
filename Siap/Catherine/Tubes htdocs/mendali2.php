@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<Link href="styleMendali.css" type="text/css" rel="stylesheet">
+		<Link href="styleMendali2.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -64,16 +64,13 @@
 					<h3>Piramida Giza, Mesir</h3>
 					<p>Waktu tempuh:1 hari</p>
 				</article>
-				<article class="dua1">
+				<article class="dua">
 					<i class="fa fa-hourglass-end"></i>
 					<i class="fa fa-paper-plane"></i>
 					<i class="fa fa-check-square"></i>
 				</article>
-				<article class="tiga1">
-					<b>Sudah diterima</b>
-				</article>
-				<article>
-					<a href="mendali2.php" class="btn btn-info" role="button">Tandai Terima</a>
+				<article class="tiga">
+					<i class="fa fa-check">  <b>Sudah diterima</b></i>
 				</article>
 			</div>
 		</div>

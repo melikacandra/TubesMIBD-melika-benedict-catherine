@@ -64,6 +64,7 @@
 				      	<h3>Virtual Marathon</h3>
 				    </div>
 				</div>
+			</div>
 		</div>
 	</body>
-</head>
+</html>

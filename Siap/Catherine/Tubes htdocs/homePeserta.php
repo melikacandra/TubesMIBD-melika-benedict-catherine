@@ -21,7 +21,7 @@
 			<li><a class="fa fa-user-circle-o" href="#"></a></li>
 			<li><a href="#">Profil</a></li>
 			<li><a class="fa fa-sign-out" href="#"></a></li>
-			<li><a href="#">Log in</a></li>
+			<li><a href="#">Log out</a></li>
 		</ul>
 
 		<div class="w3-card-0">
@@ -74,6 +74,7 @@
 				      	<h3>Virtual Marathon</h3>
 				    </div>
 				</div>
+			</div>
 		</div>
 	</body>
-</head>
+</html>
