@@ -1,0 +1,63 @@
+.form-background{
+    height: 450px;
+    margin-top: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color:#dddddd;
+}
+td > input{
+    width: 200px;
+}
+table{
+    margin-left: 50px;
+    float: left;
+    
+}
+td{
+    padding-top: 10px;
+    padding-left: 50px;
+}
+textarea{
+    height: 100px;
+    width: 200px;
+}
+
+.upload-gambar{
+    height: 100px;
+    background-color: whitesmoke;
+    margin-left: 60%;
+    margin-right: 15%;
+    height: 200px;
+    margin-top: 10px;  
+    border-style:solid;  
+    border-width: 1px;
+    border-color:grey;  
+}
+.upload-gambar i{
+    color: lightgrey;
+    font-size: 100px;
+    margin-top: 20%;
+    margin-left: 32%;
+
+
+}
+#tombol{
+    margin-left: 30%;
+    margin-top: 10%;
+}
+button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+#simpan{
+    background-color: green;
+    color: white;
+}
+#kembali{
+    background-color:red;
+    color: white;
+}
