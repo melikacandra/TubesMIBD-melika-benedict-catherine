@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  background-color: #9fc5f8;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 8%;
+  background-color: #073763;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+.fa-user-circle-o{
+  padding-top: 500%;
+}
+
+.w3-card-0{
+  margin-left: 10%;
+  width: 85%;
+  color: white;
+}
+
+.w3-row{
+  background-color: #073763;
+  padding-left: 6px;
+  margin-bottom: 20px;
+}
+
+.w3-third h1{
+  color: #f1c232;
+}
+
+.w3-right img{
+  width: 130px;
+  padding-top: 15px;
+}
+
+.tengah {
+  font-size: 20px;
+  background-color: #2b78e4;
+}
+
+i a{
+  text-decoration: none;
+}
+
+.pojok{
+  padding-left: 0.5cm;
+  padding-right: 0.5cm;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 20px;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+  background-color: #735;
+}
+
+.column .card i {
+  font-size: 80px;
+}
+
+.test{
+  background-color: #085394;
+}
+
+.test a{
+  color: #ff9900;
+}
+
+.test1{
+   background-color: #ff9900;
+   font-size: 84px;
+}
+
+.test1 {
+   color: #085394;
+}
