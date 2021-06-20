@@ -16,6 +16,9 @@ class LoginController{
     public function ViewLogin(){
         return View::createView('general/login.php', []);
     }
+    public function ViewHome(){
+        return View::createView('general/home.php', []);
+    }
 
     public function logout(){
         session_start();

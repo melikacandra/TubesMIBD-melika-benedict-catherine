@@ -6,6 +6,11 @@
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		switch ($url) {
 			//umum
+			case $baseURL. '/home':
+				require_once "controller/loginController.php";
+				$loginCtrl = new LoginController();
+				echo $loginCtrl->ViewHome();
+				break;
 			case $baseURL. '/signup':
 				require_once "controller/signupController.php";
 				$signupCtrl = new SignupController();

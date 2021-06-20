@@ -5,13 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<Link href="styleHome.css" type="text/css" rel="stylesheet">
+		<Link href="view/general/styleHome.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body>
 		<ul>
-			<li><a class="fa fa-sign-in" href="#"></a></li>
-			<li><a href="#">Log in</a></li>
+			<li><a class="fa fa-sign-in" href= 'login'></a></li>
+			<li><a href= 'login'>Log in</a></li>
 		</ul>
 
 		<div class="w3-card-0">
