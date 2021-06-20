@@ -10,7 +10,7 @@
             <h1>Selamat Datang, Admin <?php echo $_SESSION['nama']?></h1>
             
             <button type="button" onclick="location.href='logout'"> <i class="fa fa-sign-out"></i> Log Out</button>
-            <button> <i class="fa fa-user-circle-o"></i>Profil</button>    
+            <button type="button" onclick="location.href='admin/profile'"> <i class="fa fa-user-circle-o"></i>Profil</button>    
             </span>
         </div>
     </head>

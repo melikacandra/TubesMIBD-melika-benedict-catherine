@@ -17,6 +17,7 @@ class PesertaController{
         session_start();
         return View::createView('peserta/homePeserta.php', []);
     }
+	
 
 }
 ?>

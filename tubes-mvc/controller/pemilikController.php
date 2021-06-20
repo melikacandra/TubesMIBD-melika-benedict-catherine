@@ -17,5 +17,10 @@ class PemilikController{
         session_start();
         return View::createView('pemilik/homePemilik.php', []);
     }
+	public function ViewTrack(){
+		session_start();
+		return View::createView('pemilik/Track.php', []);
+	}
+	
 }
 ?>

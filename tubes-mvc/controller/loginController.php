@@ -35,7 +35,7 @@ class LoginController{
             $_SESSION['username'] = $username;
 	        $_SESSION['nama'] = $data[0]['nama'];
 	        $_SESSION['status'] = "sudah_login";
-	        $_SESSION['id_login'] = $data[0]['id'];
+	        $_SESSION['idPerson'] = $data[0]['idPerson'];
             $_SESSION['role'] = $data[0]['role'];
             if($_SESSION['role'] === 'pemilik'){
                 header("location:pemilik");
