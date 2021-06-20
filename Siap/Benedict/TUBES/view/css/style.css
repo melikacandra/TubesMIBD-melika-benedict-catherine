@@ -1,0 +1,123 @@
+/*sign up*/
+textarea {
+	rows="4";
+	cols="25";
+}
+
+.header {
+	background-color: blue;
+	padding: 5px;
+	color: white;
+}
+
+/*admin_profile*/
+
+.vertical_nav_bar_admin_profile ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: lightblue;
+}
+
+.vertical_nav_bar_admin_profile li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.vertical_nav_bar_admin_profile li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+/*admin_daftar_peserta*/
+
+.vertical_nav_bar_admin_daftar_peserta ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: lightblue;
+}
+
+.vertical_nav_bar_admin_daftar_peserta li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.vertical_nav_bar_admin_daftar_peserta li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.horizontal_nav_bar_admin_daftar_peserta ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+.horizontal_nav_bar_admin_daftar_peserta li {
+	float: left;
+}
+
+.horizontal_nav_bar_admin_daftar_peserta li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.horizontal_nav_bar_admin_daftar_peserta li a:hover {
+	background-color: #111;
+}
+
+.vertical_nav_bar_admin_data_transaksi ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: lightblue;
+}
+
+.vertical_nav_bar_admin_data_transaksi li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.vertical_nav_bar_admin_data_transaksi li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.horizontal_nav_bar_admin_data_transaksi ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+.horizontal_nav_bar_admin_data_transaksi li {
+	float: left;
+}
+
+.horizontal_nav_bar_admin_data_transaksi li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.horizontal_nav_bar_admin_data_transaksi li a:hover {
+	background-color: #111;
+}
