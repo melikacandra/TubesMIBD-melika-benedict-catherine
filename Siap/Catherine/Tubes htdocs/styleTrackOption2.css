@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  background-color: #9fc5f8;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 7%;
+  background-color: #073763;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 13px;
+  text-decoration: none;
+}
+
+.fa-home{
+  padding-top: 35%;
+}
+
+
+.fa-user-circle-o{
+  padding-top: 240%;
+}
+
+a:hover{
+  color: lightblue;
+}
+
+.sebelah{
+  margin-left: 7%;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  background-color: #2b78e4;
+}
+
+h1{
+  display: inline-flex;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.sebelah .fa-road{
+  font-size: 40px;
+  color: white;
+}
+
+
+/*isinya yang ditengah*/
+.main {
+  float: left;
+  width: 40%;
+  height: 1.5cm;
+  text-align: center;
+  margin:2% 5% 10% 13%;
+  background-color: #073763;
+  color: #f1c232;
+}
+
+.isi{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 20%;
+}
+
+.right {
+  background-color: #073763;
+  margin-top: 2%;
+  float: left;
+  width: 30%;
+  text-align: center;
+  color: white;
+}
+
+.isi2{
+  background-color: #9fc5f8;
+}
+
+.isi2 img{
+  width: 60%;
+}
+
+.isi2 table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 2.2cm;
+    width: 60%;
+    background-color: #2b78e4;
+    color: #f1c232;
+    padding: 10px;
+}
+
+.isi2 td:first-child {
+    border-right: 1px solid black;
+}
+
+.isi2 td{
+  padding: 10px;
+}
+
+.kiri1 table{
+  margin-top: 25%;
+  margin-left: 12%;
+}
+
+.kiri1 button{
+  background-color: #660000;
+  color: white;
+  width: 100%;
+  height: 40px;
+}
+
+.kanan1 button{
+  margin-left:920%;
+}
+
+.bawah{
+  margin-top: 3%;
+  margin-left: 40%;
+}
+
+.bawah button{
+  width: 30%;
+  height: 60px;
+  background-color: red;
+  color: white;
+  font-size: 30px;
+}
