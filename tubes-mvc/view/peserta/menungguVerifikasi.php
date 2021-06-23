@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Transaksi</title>
+		<title>Menunggu Verifikasi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<Link href="view/peserta/css/styleTransaksi.css" type="text/css" rel="stylesheet">
+		<Link href="styleMenungguVerifikasi.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body>
-	<?php 
-		include 'layout/navbar.php';
-	?>
+		<ul>
+			<li><a class="fa fa-home" href="homePeserta.php"></a></li>
+			<li><a href="homePeserta.php">Home</a></li>
+
+			<li><a class="fa fa-line-chart" href="progress.php"></a></li>
+			<li><a href="progress.php">Progress</a></li>
+
+			<li><a class="fa fa-exchange" href="transaksi.php"></a></li>
+			<li><a href="transaksi.php">Transaksi</a></li>
+
+			<li><a href="mendali.php"><img src="assets/mendali.png" width="18" height="18"></a></li>
+			<li><a href="mendali.php">Mendali</a></li>
+
+			<li><a class="fa fa-user-circle-o" href="#"></a></li>
+			<li><a href="#">Profil</a></li>
+
+			<li><a class="fa fa-sign-out" href="#"></a></li>
+			<li><a href="#">Log in</a></li>
+		</ul>
+
 		<div class="sebelah">
 			<h1>Transaksi</h1>
 		</div>
 
 		<div class="navbar">
-		  <a class="active" href="transaksi.php">Keranjang</a> 
-		  <a href="menungguVerifikasi.php">Riwayat Transaksi</a> 
+		  <a href="transaksi.php">Keranjang</a> 
+		  <a class="active" href="menungguVerifikasi.php">Riwayat Transaksi</a> 
 		</div>
 
 
@@ -27,16 +44,15 @@
 		  		<table class="atas12">
 		  			<tr>
 		  				<td><i class="fa fa-shopping-cart"></i></td>
-		  				<td> Keranjang</td>
-		  				<td><i class="fa fa-plus-circle"></i></td>
+		  				<td> Riwayat Transaksi</td>
 		  			</tr>
 		  		</table>
 		  		<br>
 		  		<div class="isi2">
 			  		<table>
 			  			<tr>
-			  				<td><h3> Track Kiyomizu Dera, Jepang</h3></td>
-			  				<td><i class="fa fa-times"></i></td>
+			  				<td><h4> Track Kiyomizu Dera, Jepang</h4></td>
+			  				<td><h4 class="tanggal"> 8 Juni 2021</h4></td>
 			  			</tr>
 			  		</table>
 		  		</div>
@@ -52,42 +68,17 @@
 			    			<td class="jarak"><b>Jarak: 3.5 km</b></td>
 			    			<td class="keterangan"> Harga: Rp200.000</td>
 			    		</tr>
+			    		<tr>
+			    			<td class="status">Status: <i class="fa fa-clock-o"><b> Menunggu Verifikasi Admin</b></i><td>
+			    		</tr>
 			    	</table>
 			    	<br>
 			    </div>
 		  	</div>
-
-
-
-		  	<div class="right">
-			    <h3>Ringkasan Belanja</h3>
-			    <div class="isi">
-			    	<table>
-			    		<tr>
-			    			<td><b>Jumlah Track</b></td>
-			    			<td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b> 1</b></td>
-			    		</tr>
-			    		<tr>
-			    			<td>KiyomizuD,Jp</td>
-			    			<td>&emsp;&emsp; Rp200.000</td>
-			    		</tr>
-			    	</table>
-
-			    	<hr>
-
-			    	<b class="total">Total Harga Rp200.000</b>
-
-			    	<br><br>
-
-			    	<a href="caraPembayaran"><button class="btn"><i class="fa fa-money"> Bayar</i></button></a>
-
-			    	<br><br>
-			    </div>
-			</div>
 		</div>
 	</body>
 	<style>
-	body {
+		body {
   margin: 0;
   background-color: #9fc5f8;
 }
@@ -162,7 +153,7 @@ h1{
 
 .navbar a.active {
   background-color: rgb(0,255,255);
-  border-right:1px solid black;
+  border-left:1px solid black;
 }
 
 .main {
@@ -183,6 +174,10 @@ h1{
   padding-left: 10px;
 }
 
+.isi2 .tanggal{
+  padding-left: 9cm;
+}
+
 .main .atas12{
   font-size: 30px;
 
@@ -194,16 +189,11 @@ h1{
   padding-top: 8px;
 }
 
-.fa-plus-circle{
-  padding-left: 14cm;
-  font-size: 40px;
-  padding-top: 8px;
-}
-
-.fa-times{
-  padding-left: 10.5cm;
-  font-size: 25px;
-  padding-top: 8px;
+.isi{
+  background-color: white;
+  padding-top: 20px;
+  padding-left: 15px;
+  color: black;
 }
 
 .isi img{
@@ -219,37 +209,13 @@ h1{
   font-size: 18px;
 }
 
-.right {
-  background-color: #073763;
-  float: left;
-  width: 18%;
-  color: #f1c232;
-  text-align: center;
-}
-
-.isi{
-  background-color: white;
-  padding-top: 20px;
-  padding-left: 15px;
+.fa-clock-o{
+  font-size: 18px;
   color: black;
 }
 
-.isi hr{
-  margin-left: -15px;
-}
-
-.total{
-  font-size: 15px;
-  margin-left:-15px; 
-}
-
-.btn {
-  background-color: red;
-  border: none;
-  color: white;
-  cursor: pointer;
-  height: 40px;
-  font-size: 20px;
+.status{
+  padding-top: 30px;
 }
 	</style>
 

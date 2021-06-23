@@ -1,6 +1,7 @@
 <?php 
 require_once "controller/services/mysqlDB.php";
 require_once "controller/services/view.php";
+require_once "model/user.php";
 
 class PesertaController{
     public function __construct() {
@@ -28,7 +29,7 @@ class PesertaController{
         //die();
 		$user = new User($query_result[0]['idPerson'], $query_result[0]['nama'], $query_result[0]['username'], $query_result[0]['email'], $query_result[0]['password'], $query_result[0]['gender'], $query_result[0]['alamat'], $query_result[0]['kontak'], $query_result[0]['tgl_lahir'], $query_result[0]['role']);
 
-		return View::createView('peserta/profile.php', ["user" => $user]);
+		return View::createView('peserta/profil.php', ["user" => $user]);
 	}
 	public function ViewEditProfile(){
 		session_start();
@@ -41,7 +42,7 @@ class PesertaController{
         //die();
 		$user = new User($query_result[0]['idPerson'], $query_result[0]['nama'], $query_result[0]['username'], $query_result[0]['email'], $query_result[0]['password'], $query_result[0]['gender'], $query_result[0]['alamat'], $query_result[0]['kontak'], $query_result[0]['tgl_lahir'], $query_result[0]['role']);
 
-		return View::createView('peserta/profileEdit.php', ["user" => $user]);
+		return View::createView('peserta/profilEdit.php', ["user" => $user]);
 	}
 	public function ViewAllProgress(){
 		session_start();
@@ -51,7 +52,7 @@ class PesertaController{
 		
 		
 		*/
-		return View::createView('peserta/listTrack.php', []);
+		return View::createView('peserta/progress.php', []);
 	}
 	public function ViewSpecifyProgress(){
 		session_start();
@@ -61,7 +62,7 @@ class PesertaController{
 		
 		
 		*/
-		return View::createView('peserta/progress.php', []);
+		return View::createView('peserta/currentProgress.php', []);
 	}
 	public function ViewKeranjangTransaksi(){
 		session_start();
@@ -87,7 +88,18 @@ class PesertaController{
 		*/
 		return View::createView('peserta/buktiPembayaran.php', []);
 	}
+	//simulator
 	public function ViewRiwayatTransaksi(){
+		session_start();
+		/*QUERY
+		
+		
+		
+		
+		*/
+		return View::createView('peserta/menungguVerifikasi.php', []);
+	}
+	public function ViewSimVerifikasi(){
 		session_start();
 		/*QUERY
 		
@@ -97,7 +109,6 @@ class PesertaController{
 		*/
 		return View::createView('peserta/terverifikasi.php', []);
 	}
-	
 	public function ViewMedali(){
 		session_start();
 		/*QUERY
@@ -116,7 +127,11 @@ class PesertaController{
 		
 		
 		*/
-		return View::createView('peserta/progeress.php', []);
+		return View::createView('peserta/track.php', []);
+	}
+	public function ViewSimTrack(){
+		session_start();
+		return View::createView('peserta/trackOption1.php', []);
 	}
 
 }

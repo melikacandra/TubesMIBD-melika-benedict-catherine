@@ -1,17 +1,23 @@
 </div>
         <div class="left">
-            <a id="home"><i class= "fa fa-home"></i></a>
+            <i id="home" class= "fa fa-home"></i>
+            <h6>Home</h6>
             <br>
-            <a id="cekTransaksi"><i class= "fa fa-money"></i></a>
+            <i class= "fa fa-line-chart"></i>
+            <h6>Progress</h6>
             <br>
-            <a id="cekMarathon"><i class= "fa fa-road"></i></a>
+            <i class= "fa fa-exchange"></i>
+            <h6>Transaksi</h6>
             <br>
-            <a id="cekMedali"> <i class= "fa fa-trophy"></i></a>
+            <img src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/medal-2-icon-18-256.png">
+            <h6>Medali</h6>
             <div class="down">
                 <hr>
-                <a id="profil" ><i class= "fa fa-user-circle-o"></i></a>
+                <i class= "fa fa-user-circle-o"></i>
+                <h6>Profil</h6>
                 <br>
-                <a id="logout"><i class= "fa fa-sign-out"></i></a>
+                <i id="logout" class= "fa fa-sign-out"></i>
+                <h6>Log out</h6>
             </div>
         </div>
     </head>
@@ -20,31 +26,15 @@
         <script>
         let home = document.getElementById("home").addEventListener("click", toHome);
         function toHome(event){
-            location.replace("http://localhost/tubes-mvc/admin");
+            location.replace("http://localhost/tubes-mvc/peserta");
         }
         let logout = document.getElementById("logout").addEventListener("click", logOut);
         function logOut(event){
             location.replace("http://localhost/tubes-mvc/logout");
         }
-        let profil = document.getElementById("profil").addEventListener("click", cekProfil);
-        function cekProfil(event){
-            location.replace("http://localhost/tubes-mvc/admin/profile");
-        }
-        let marathon = document.getElementById("cekMarathon").addEventListener("click", cekMarathon);
-        function cekMarathon(event){
-            location.replace("http://localhost/tubes-mvc/admin/cekMarathon");
-        }
-        let transaksi = document.getElementById("cekTransaksi").addEventListener("click", cekTransaksi);
-        function cekTransaksi(event){
-            location.replace("http://localhost/tubes-mvc/admin/cekPembayaran");
-        }
-        let medali = document.getElementById("cekMedali").addEventListener("click", cekMedali);
-        function cekMedali(event){
-            location.replace("http://localhost/tubes-mvc/admin/cekMedali");
-        }
     </script>
 <style>
-    body{
+body{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 nav{
@@ -63,20 +53,21 @@ nav{
     font-size:35px;
     }
 .left{
-    background-color: #2b78e4 ;
+    background-color: #073763 ;
     width: 5%;
-    height: 100%;
+    height: 89%;
     position: absolute;
     float: left;
 }
 .left i{
     font-size: 30px;
     margin-left: 20%;
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
     color: white;
 }
 .down{
-    margin-top: 250px;
+    margin-top: 130px;
 }
 
 .tambah-baru{
@@ -123,5 +114,17 @@ nav{
     height: 50px;
     border-radius: 10px;
 }
-
+img{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+h6{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+    padding: 0;
+}
 </style>        

@@ -17,16 +17,16 @@
     <body>
         <div class =menu id=track>
             <div class=menu-button>
-                <i class="fa fa-money" onclick="location.href='Track.php'"></i>
+                <i class="fa fa-money" onclick="location.href='admin/cekPembayaran'"></i>
                 <p>Status Pembayaran</p>
             </div>
-            <div class=menu-button onclick="location.href='laporan-rangkuman.php'">
+            <div class=menu-button onclick="location.href='admin/cekMarathon'">
                 <i class="fa fa-road"></i>
                 <p>Status Marathon</p>
             </div>
         </div>
         </div>
-             <div class=menu-middle onclick="location.href='laporan-rangkuman.php'">
+             <div class=menu-middle onclick="location.href='admin/cekMedali'">
                 <i class="fa fa-trophy"></i>
                 <p>Status Medali</p>
             </div>

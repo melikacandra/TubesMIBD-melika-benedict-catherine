@@ -33,7 +33,7 @@
 			      	<i class='fa fa-home'><a href="homePeserta.html"> Home</a></i>
 			    </div>
 			    <div class="w3-third w3-center">
-			      	<i class='fa fa-road'><a href="track.html"> Track</a></i>
+			      	<i class='fa fa-road'><a href="peserta/track"> Track</a></i>
 			    </div>
 			    <div class="w3-right pojok">
 			      	<i class='fa fa-users'><a href="#"> Testimoni</a></i>

@@ -36,8 +36,11 @@
     </div>
     <button type="button" onclick="location.href='profile/edit'">Edit Profile</button>
     </div>
-    <style>
-    .content{
+<?php
+    include 'layout/footer.php'
+?>
+<style>
+.content{
     margin-left: 5%;
     width: 95%;
     height: 100%;
@@ -95,7 +98,4 @@ button{
    background-color: #f9cb9c;
    padding: 10px;
 }
-    </style>
-<?php
-    include 'layout/footer.php'
-?>
+</style>

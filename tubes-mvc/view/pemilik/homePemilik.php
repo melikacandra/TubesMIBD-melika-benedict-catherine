@@ -11,21 +11,20 @@
             <h1>Halo, Pemilik <?php echo $_SESSION['nama']?></h1>
             
             <button type="button" onclick="location.href='logout'"> <i class="fa fa-sign-out"></i> Log Out</button>
-            <button> <i class="fa fa-user-circle-o"></i>Profil</button>    
+            <button type="button" onclick="location.href='pemilik/profile'"> <i class="fa fa-user-circle-o"></i>Profil</button>    
             </span>
         </div>
     </head>
     <body>
         <div class =menu id=track>
             <div class=menu-button>
-                <i class="fa fa-road" onclick="location.href='Track.php'"></i>
+                <i class="fa fa-road" onclick="location.href='pemilik/track'"></i>
                 <p>Daftar Track</p>
             </div>
-            <div class=menu-button onclick="location.href='laporan-rangkuman.php'">
+            <div class=menu-button onclick="location.href='pemilik/laporan-rangkuman'">
                 <i class="fa fa-newspaper-o"></i>
                 <p>Laporan</p>
             </div>
         </div>
-
     </body>
 </html>

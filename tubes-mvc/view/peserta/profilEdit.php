@@ -77,18 +77,19 @@
     
     <button id="simpan" type="button">Simpan</button>
     </div>
-    <!---JAVASCRIPT--->
-    <script>
+      <!---JAVASCRIPT--->
+      <script>
         let kembali = document.getElementById("simpan");
         kembali.addEventListener("click", onClick);
         console.log(kembali);
         function onClick(event){
             console.log(location);
-            location.replace("http://localhost/tubes-mvc/pemilik/profile");
+            location.replace("http://localhost/tubes-mvc/peserta/profile");
         }
     </script>
+    <!---STYLE--->
     <style>
-    .content{
+ .content{
     margin-left: 5%;
     width: 95%;
     height: 100%;
@@ -145,8 +146,8 @@ button{
    margin-left: 80%;
    background-color: #f9cb9c;
    padding: 10px;
-}
-    </style>
+}   
+</style>
 <?php
     include 'layout/footer.php'
 ?>

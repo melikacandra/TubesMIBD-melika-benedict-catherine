@@ -44,5 +44,29 @@ class AdminController{
 
 		return View::createView('admin/profileEdit.php', ["user" => $user]);
 	}
+	public function ViewPembayaran(){
+		session_start();
+		return View::createView('admin/validasiPembayaranSemua.php', []);
+	}
+	public function ViewBelumSemua(){
+		session_start();
+		return View::createView('admin/pembayaranBelumSemua.php', []);
+	}
+	public function ViewMedali(){
+		session_start();
+		return View::createView('admin/statusMendali.php', []);
+	}
+	public function ViewMarathon(){
+		session_start();
+		return View::createView('admin/statusMarathon.php', []);
+	}
+	public function ViewSimTerima(){
+		session_start();
+		return View::createView('admin/setelahDiterimaNolak.php', []);
+	}
+	public function ViewSimTolak(){
+		session_start();
+		return View::createView('admin/tolakHasil.php', []);
+	}
 }
 ?>
