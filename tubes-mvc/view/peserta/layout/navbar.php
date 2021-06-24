@@ -2,12 +2,12 @@
 <ul>
 			<li><a id="home" class="fa fa-home" href="peserta"></a></li>
 			<li><a href="peserta">Home</a></li>
-			<li><a id="progress" class="fa fa-line-chart" href="progress"></a></li>
-			<li><a  href="#">Progress</a></li>
-			<li><a class="fa fa-exchange" href="peserta/keranjangTransaksi"></a></li>
+			<li><a id="progress" class="fa fa-line-chart" href="peserta/progress"></a></li>
+			<li><a href="#">Progress</a></li>
+			<li><a id="cekTransaksi" class="fa fa-exchange" href="peserta/keranjangTransaksi"></a></li>
 			<li><a href="peserta/keranjangTransaksi">Transaksi</a></li>
-			<li><a href="medali"><img src="view/peserta/assets/mendali.png" width="18" height="18"></a></li>
-			<li><a href="medali">Medali</a></li>
+			<li><a id="cekMedali" href="peserta/medali"><img src="view/peserta/assets/mendali.png" width="18" height="18"></a></li>
+			<li><a href="#">Medali</a></li>
 			<li><a class="fa fa-user-circle-o" href="peserta/profile"></a></li>
 			<li><a id="profil"href="#">Profil</a></li>
 			<li><a id="logout" class="fa fa-sign-out" href="logout"></a></li>

@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<Link href="styleCurrentProgress.css" type="text/css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" ></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <Link href="styleCurrentProgress.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -34,7 +36,9 @@
 		  	<div class="main">
 		  		<table class="atas12">
 		  			<tr>
-		  				<td>....</td>
+		  				<td>
+                <canvas id="tempuh"></canvas>
+              </td>
 		  			</tr>
 		  			<tr>
 						<td> Progress 0%</td>
@@ -86,6 +90,26 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+let genderChart = document.getElementById('tempuh').getContext('2d');
+
+    let genderPopChart = new Chart(genderChart, {
+        type:'bar',
+        data:{
+            labels: ['Progress'],
+            datasets: [{
+                label: 'progress track',
+                data:[
+                   2.5,
+                ],
+                backgroundColor:[
+                    'blue',
+                ],
+            }],
+        },
+        options: {
+             indexAxis: 'y',
+        }
+    });
 		</script>
 	</body>
 	<style>

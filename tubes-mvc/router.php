@@ -93,6 +93,11 @@
 				require_once "controller/pesertaController.php";
 				$pesertaCtrl = new PesertaController();
 				echo $pesertaCtrl->ViewSimTrack();
+				break;
+			case $baseURL.'/peserta/simTerimaMedali':
+				require_once "controller/pesertaController.php";
+				$pesertaCtrl = new PesertaController();
+				echo $pesertaCtrl->ViewSimMedali();
 				break;												
 			//pemilik	
 			case $baseURL.'/pemilik':

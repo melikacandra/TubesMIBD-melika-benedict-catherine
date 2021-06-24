@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<Link href="view/peserta/css/styleMendali.css" type="text/css" rel="stylesheet">
+		<Link href="styleMendali2.css" type="text/css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -53,23 +53,18 @@
 					<h3>Piramida Giza, Mesir</h3>
 					<p>Waktu tempuh:1 hari</p>
 				</article>
-				<article class="dua1">
+				<article class="dua">
 					<i class="fa fa-hourglass-end"></i>
 					<i class="fa fa-paper-plane"></i>
 					<i class="fa fa-check-square"></i>
 				</article>
-				<article class="tiga1">
-					<b>Sudah diterima</b>
-				</article>
-				<article>
-					<a href="simTerimaMedali" class="btn btn-info" role="button">Tandai Terima</a>
+				<article class="tiga">
+					<i class="fa fa-check">  <b>Sudah diterima</b></i>
 				</article>
 			</div>
 		</div>
-		
-	</body>
-	<style>
-	body {
+		<style>
+			body {
   margin: 0;
   background-color: #9fc5f8;
 }
@@ -160,39 +155,24 @@ h1{
   font-size: 100px;
 }
 
-.dua, .tiga, .dua1{
+.dua, .tiga{
   background: white;
   color: #009e0f;
 }
 
- .tiga1, .dua1 .fa-check-square{
-  background: white;
-  color: black;
- }
-
-.dua i, .dua1 i{
+.dua i{
   padding-left: 12px;
   padding-right: 12px;
   font-size: 30px;
 }
 
-.tiga, .tiga1 i{
+.tiga i{
   font-size: 30px;
 }
 
-.tiga, .tiga1 b{
+.tiga b{
   font-size: 23px;
 }
-
-.btn{
-    padding: 7px;
-    margin-left: 39%;
-    width: 105px;
-    border: 1px solid black;
-    color: white;
-    background: #2b78e4;
-    cursor: pointer;
-    border-radius: 4px;
-}
-	</style>
+		</style>
+	</body>
 </html>

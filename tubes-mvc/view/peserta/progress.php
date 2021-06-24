@@ -28,7 +28,7 @@
 
  		<div class="row">
 		  	<div class="column">
-		    	<a href="currentProgress.php">
+		    	<a href="progress/currentProgress">
 		    		<div class="card">
 			      		<p>Kiyomizu Dera, Jepang</p>
 				      	<img src="assets/kiyomizu.jpg">

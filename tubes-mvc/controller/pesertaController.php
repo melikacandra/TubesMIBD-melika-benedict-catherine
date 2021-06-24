@@ -119,6 +119,16 @@ class PesertaController{
 		*/
 		return View::createView('peserta/mendali.php', []);
 	}
+	public function ViewSimMedali(){
+		session_start();
+		/*QUERY
+		
+		
+		
+		
+		*/
+		return View::createView('peserta/mendali2.php', []);
+	}
 	public function ViewAllTrack(){
 		session_start();
 		/*QUERY
