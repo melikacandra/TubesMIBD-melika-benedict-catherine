@@ -21,6 +21,11 @@
 				$profileCtrl = new ProfileController();
 				echo $profileCtrl->view_profile();
 				break;
+			case $baseURL. '/update':
+				require_once "controller/editProfileController.php";
+				$editProfileCtrl = new editProfileController();
+				echo $editProfileCtrl->view_update_signup();
+				break;
 			case $baseURL. '/logout':
 				require_once "controller/logoutController.php";
 				$logoutCtrl = new LogoutController();
@@ -28,15 +33,32 @@
 				break;
 
 			// admin
-			case $baseURL. '/main':
+			case $baseURL. '/mainAdmin':
 				require_once "controller/administrator/mainController.php";
 				$mainCtrl = new MainController();
 				echo $mainCtrl->view_main();
+				break;
+			case $baseURL. '/status-transaksi':
+				require_once "controller/administrator/transaksiController.php";
+				$transaksiCtrl = new TransaksiController();
+				echo $transaksiCtrl->show_transaksi();
 				break;
 			case $baseURL. '/status-marathon':
 				require_once "controller/administrator/pesertaController.php";
 				$pesertaCtrl = new PesertaController();
 				echo $pesertaCtrl->show_peserta();
+				break;
+			case $baseURL. '/status-medali':
+				require_once "controller/administrator/medaliController.php";
+				$medaliCtrl = new MedaliController();
+				echo $medaliCtrl->show_medali();
+				break;
+
+			//peserta
+			case $baseURL. '/homepage':
+				require_once "controller/peserta/homepageController.php";
+				$homepageCtrl = new HomepageController();
+				echo $homepageCtrl->view_homepage();
 				break;
 
 
@@ -58,6 +80,12 @@
 				$signupCtrl = new SignupController();
 				$signupCtrl->signup_database();
 				header('Location: login');
+				break;
+			case $baseURL. '/update_database':
+				require_once "controller/editProfileController.php";
+				$editProfileCtrl = new editProfileController();
+				$editProfileCtrl->update_database();
+				header('Location: profile');
 				break;
 
 

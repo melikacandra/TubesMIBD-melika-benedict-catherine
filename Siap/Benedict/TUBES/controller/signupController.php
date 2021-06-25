@@ -36,7 +36,7 @@ class SignupController {
 		$contact = $_POST['input_phone_number'];
 		$birthdate = $_POST['input_tanggal_lahir'];
 		$gender = $_POST['input_gender'];
-
+		
 		// set default role
 		$role = 'Peserta';
 		if (str_contains($username, '@admin')) {

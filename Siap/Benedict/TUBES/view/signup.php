@@ -47,11 +47,11 @@
 				<tr>
 					<td>Jenis Kelamin</td>
 					<td>
-						<input type="radio" id="male" name="jenis kelamin" value="male">
+						<input type="radio" id="male" name="input_gender" value="Laki-laki">
 						<label for="male">Laki-laki</label>
 					</td>
 					<td>
-						<input type="radio" id="female" name="jenis kelamin" value="female">
+						<input type="radio" id="female" name="input_gender" value="Perempuan">
 						<label for="female">Perempuan</label>
 					</td>
 				</tr>

@@ -3,7 +3,7 @@
 require_once "controller/services/mysqlDB.php";
 require_once "controller/services/view.php";
 
-class MainController {
+class HomepageController {
 
 	protected $db;
 
@@ -21,16 +21,16 @@ class MainController {
 		
 	}
 
-	public function view_main() {
+	public function view_homepage() {
 
 		if (isset($_SESSION['idPerson'])) {
-			return View::createView('administrator/mainAdmin.php', []);
+			return View::createView('peserta/homepage.php', []);
 		}
 		else {
 			header("Location: login");
 		}
 	}
-	
+
 }
 
 ?>

@@ -40,8 +40,18 @@ class LoginController {
 		}
 		else {
 			$_SESSION['idPerson'] = $query_result[0]['idPerson'];
+			$_SESSION['nama'] = $query_result[0]['nama'];
 			$_SESSION['role'] = $query_result[0]['role'];
-			header("Location: main");
+
+			if ($_SESSION['role'] == 'Administrator') {
+				header("Location: mainAdmin");
+			}
+			else if ($_SESSION['role'] == 'Pemilik') {
+				header("Location: mainPemilik");
+			}
+			else {
+				header("Location: homepage");
+			}
 		}
 
 	}

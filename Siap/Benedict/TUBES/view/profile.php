@@ -35,6 +35,7 @@
 				<td><?php echo $user->getGender() ?></td>
 			</tr>
 		</table>
+		<a href="update">Edit Profile</a>
 	</div>
 </body>
 </html>

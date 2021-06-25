@@ -29,7 +29,7 @@
 	<div class="admin_profile_content">
 		<h2>Daftar Peserta</h2>
 
-		<table width="50%">
+		<table width="100%">
 			<tr>
 				<th>IdPeserta</th>
 				<th>Nama</th>

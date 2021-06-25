@@ -31,7 +31,7 @@
 	<div class="admin_profile_content">
 		<h2>Daftar Transaksi</h2>
 
-		<table width="50%">
+		<table width="100%">
 			<tr>
 				<th>Tanggal</th>
 				<th>Nama</th>
@@ -40,26 +40,18 @@
 				<th>Bukti</th>
 				<th>Status</th>
 				<th>Keterangan</th>
-				<th>Cek</th>
 			</tr>
+			<?php foreach ($query_result as $key => $value): ?>
 			<tr>
-				<td>10-05-21</td>
-				<td>Anak Mesir</td>
-				<td>200.000</td>
-				<td>Sg.Nil</td>
-				<td><a href="">Pembayaran.jpg</a></td>
-				<td>-</td>
-				<td>-</td>
-				<td>-</td>
+				<td><?php echo $value["tgl_transaksi"] ?></td>
+				<td><?php echo $value["nama"] ?></td>
+				<td><?php echo $value["harga"] ?></td>
+				<td><?php echo $value["tema"] ?></td>
+				<td><?php echo $value["bukti_transaksi"] ?></td>
+				<td><?php echo $value["status_verifikasi"] ?></td>
+				<td><?php echo $value["keterangan"] ?></td>
 			</tr>
-				<td>10-05-21</td>
-				<td>Benedict Febrian</td>
-				<td>200.000</td>
-				<td>Ky. Dera</td>
-				<td><a href="">Pembayaran.jpg</a></td>
-				<td>-</td>
-				<td>-</td>
-				<td>-</td>
+			<?php endforeach; ?>
 		</table>
 	</div>
 </body>

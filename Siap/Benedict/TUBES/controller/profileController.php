@@ -9,7 +9,7 @@ class ProfileController {
 	protected $db;
 
 	public function __construct() {
-
+		
 		session_start();
 
 		$this->db = new MySQLDB("localhost", "root", "", "tugas_besar");

@@ -1,6 +1,7 @@
 <?php
 
-class MySQLDB{
+class MySQLDB {
+
 	protected $servername;
 	protected $username;
 	protected $password;
@@ -28,7 +29,9 @@ class MySQLDB{
 	public function executeSelectQuery($sql) {
 
 		$this->openConnection();
+
 		$query_result = $this->db_connection->query($sql);
+
 		$result = [];
 		if ($query_result->num_rows > 0) {
 			//output data of each row
@@ -36,6 +39,7 @@ class MySQLDB{
 				$result[] = $row;
 			}
 		}
+		
 		$this->closeConnection();
 
 		return $result;
@@ -62,6 +66,6 @@ class MySQLDB{
 
 }
 
-$db = new MySQLDB("localhost","root","","ide");
+$db = new MySQLDB("localhost", "root", "", "ide");
 
 ?>
