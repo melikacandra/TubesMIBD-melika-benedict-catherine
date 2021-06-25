@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2021 at 10:38 AM
+-- Generation Time: Jun 25, 2021 at 01:57 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -37,7 +37,8 @@ CREATE TABLE `akses` (
 --
 
 INSERT INTO `akses` (`idTransaksi`, `idTrack`) VALUES
-(1, 1);
+(2, 3),
+(3, 4);
 
 -- --------------------------------------------------------
 
@@ -48,6 +49,8 @@ INSERT INTO `akses` (`idTransaksi`, `idTrack`) VALUES
 CREATE TABLE `jalan` (
   `status_akses` varchar(50) NOT NULL,
   `jarak_tempuh` float NOT NULL,
+  `waktu_mulai` datetime NOT NULL,
+  `waktu_selesai` datetime NOT NULL,
   `status_selesai` varchar(50) DEFAULT NULL,
   `progress` int(11) NOT NULL DEFAULT 0,
   `idPerson` int(11) DEFAULT NULL,
@@ -58,8 +61,9 @@ CREATE TABLE `jalan` (
 -- Dumping data for table `jalan`
 --
 
-INSERT INTO `jalan` (`status_akses`, `jarak_tempuh`, `status_selesai`, `progress`, `idPerson`, `idTrack`) VALUES
-('ya', 5, 'ya', 100, 8, 1);
+INSERT INTO `jalan` (`status_akses`, `jarak_tempuh`, `waktu_mulai`, `waktu_selesai`, `status_selesai`, `progress`, `idPerson`, `idTrack`) VALUES
+('ya', 5, '2021-06-19 16:08:48', '2021-06-21 16:08:48', 'ya', 100, 14, 3),
+('tidak', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '-', 0, 14, 4);
 
 -- --------------------------------------------------------
 
@@ -69,8 +73,6 @@ INSERT INTO `jalan` (`status_akses`, `jarak_tempuh`, `status_selesai`, `progress
 
 CREATE TABLE `medali` (
   `idMedali` int(11) NOT NULL,
-  `waktu_mulai` datetime NOT NULL,
-  `waktu_selesai` datetime NOT NULL,
   `durasi_tempuh` int(11) NOT NULL,
   `status_kirim` varchar(50) NOT NULL,
   `tgl_perolehan` date DEFAULT NULL,
@@ -82,8 +84,8 @@ CREATE TABLE `medali` (
 -- Dumping data for table `medali`
 --
 
-INSERT INTO `medali` (`idMedali`, `waktu_mulai`, `waktu_selesai`, `durasi_tempuh`, `status_kirim`, `tgl_perolehan`, `idPerson`, `idTrack`) VALUES
-(1, '2021-06-02 13:32:13', '2021-06-05 13:32:13', 72, 'diterima', '2021-06-07', 8, 1);
+INSERT INTO `medali` (`idMedali`, `durasi_tempuh`, `status_kirim`, `tgl_perolehan`, `idPerson`, `idTrack`) VALUES
+(2, 1, 'diterima', '2021-06-22', 14, 3);
 
 -- --------------------------------------------------------
 
@@ -109,9 +111,9 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`idPerson`, `nama`, `username`, `email`, `password`, `gender`, `alamat`, `kontak`, `tgl_lahir`, `role`) VALUES
-(7, 'Benedict', 'ben@admin', '6181901026@student.unpar.ac.id', '912ec803b2ce49e4a541068d495ab570', '', 'jalan', '08123456', '2021-06-02', 'Administrator'),
-(8, 'Melika', 'melika', 'melika@gmail.com', '912ec803b2ce49e4a541068d495ab570', '', 'jalan', '08123457', '2021-05-30', 'Peserta'),
-(9, 'catherine', 'catherine@pemilik', 'catherine@gmail.com', '912ec803b2ce49e4a541068d495ab570', '', 'jalan', '08123458', '2021-05-30', 'Pemilik');
+(12, 'beeen', 'ben@admin', '6181901026@student.unpar.ac.id', '912ec803b2ce49e4a541068d495ab570', 'Laki-laki', 'jaaaalan', '12345678', '2021-06-02', 'Administrator'),
+(13, 'catherine', 'catherine@pemilik', 'catherine@gmail.com', '912ec803b2ce49e4a541068d495ab570', 'Perempuan', 'jalan', '08123457', '2021-06-01', 'Pemilik'),
+(14, 'melikaa', 'melika', 'melikaa@gmail.com', '912ec803b2ce49e4a541068d495ab570', 'Perempuan', 'jaaalan', '23456789', '2021-05-31', 'Peserta');
 
 -- --------------------------------------------------------
 
@@ -133,7 +135,10 @@ CREATE TABLE `track` (
 --
 
 INSERT INTO `track` (`idTrack`, `tema`, `region`, `jarak_track`, `harga`, `gambar`) VALUES
-(1, 'Gunung Fuji', 'Jepang', 5, 200000, '');
+(3, 'Gunung Fuji', 'Jepang', 5, 200000, ''),
+(4, 'Piramida Giza', 'Mesir', 5, 200000, ''),
+(5, 'Kiyomizu Dera', 'Jepang', 8.4, 200000, 'Kiyomizu_Dera.jpg'),
+(6, 'Sungai Nil', 'Mesir', 10, 200000, 'Sungai_Nil.jpg');
 
 -- --------------------------------------------------------
 
@@ -144,7 +149,9 @@ INSERT INTO `track` (`idTrack`, `tema`, `region`, `jarak_track`, `harga`, `gamba
 CREATE TABLE `transaksi` (
   `idTransaksi` int(11) NOT NULL,
   `tgl_transaksi` date NOT NULL,
+  `bukti_transaksi` varchar(100) NOT NULL,
   `status_verifikasi` varchar(50) NOT NULL,
+  `keterangan` varchar(100) NOT NULL,
   `idPerson` int(11) DEFAULT NULL,
   `idAdmin` int(11) DEFAULT NULL,
   `tgl_verifikasi` date DEFAULT NULL
@@ -154,8 +161,10 @@ CREATE TABLE `transaksi` (
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`idTransaksi`, `tgl_transaksi`, `status_verifikasi`, `idPerson`, `idAdmin`, `tgl_verifikasi`) VALUES
-(1, '2021-06-01', 'valid', 8, 7, '2021-06-02');
+INSERT INTO `transaksi` (`idTransaksi`, `tgl_transaksi`, `bukti_transaksi`, `status_verifikasi`, `keterangan`, `idPerson`, `idAdmin`, `tgl_verifikasi`) VALUES
+(2, '2021-06-16', 'blablabla.jpg', 'valid', '', 14, 12, '2021-06-18'),
+(3, '2021-06-17', 'bukti.jpg', 'tidak valid', 'transaksi fiktif', 14, 12, '2021-06-18'),
+(4, '2021-06-18', 'struk.jpg', '', '', 14, 12, '2021-06-21');
 
 --
 -- Indexes for dumped tables
@@ -211,25 +220,25 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT for table `medali`
 --
 ALTER TABLE `medali`
-  MODIFY `idMedali` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idMedali` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `person`
 --
 ALTER TABLE `person`
-  MODIFY `idPerson` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idPerson` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `track`
 --
 ALTER TABLE `track`
-  MODIFY `idTrack` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idTrack` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `idTransaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idTransaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
