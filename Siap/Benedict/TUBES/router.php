@@ -18,6 +18,7 @@
 				break;
 			case $baseURL. '/profile':
 				require_once "controller/profileController.php";
+
 				$profileCtrl = new ProfileController();
 				echo $profileCtrl->view_profile();
 				break;
@@ -60,6 +61,33 @@
 				$homepageCtrl = new HomepageController();
 				echo $homepageCtrl->view_homepage();
 				break;
+			case $baseURL. '/progress':
+				require_once "controller/peserta/progressController.php";
+				$progressCtrl = new ProgressController();
+				echo $progressCtrl->show_progress();
+				break;
+			case $baseURL. '/searchtrack':
+				require_once "controller/peserta/tracklistController.php";
+				$tracklistCtrl = new TracklistController();
+				echo $tracklistCtrl->show_search();
+				break;
+			case $baseURL. '/tracklist':
+				require_once "controller/peserta/tracklistController.php";
+				$tracklistCtrl = new TracklistController();
+				echo $tracklistCtrl->show_tracklist();
+				break;
+			case $baseURL. '/trackoption':
+				require_once "controller/peserta/tracklistController.php";
+				$tracklistCtrl = new TracklistController();
+				echo $tracklistCtrl->show_trackoption();
+				break;
+				// transaksi
+			case $baseURL. '/medali':
+				require_once "controller/peserta/medaliController.php";
+				$medaliCtrl = new MedaliController();
+				echo $medaliCtrl->show_medali();
+				break;
+
 
 
 			default:

@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-</head>
-<body>
-	<div>
-		<a href="">Home</a>
-		<a href="">Progress</a>
-		<a href="">Transaksi</a>
-		<a href="">Medali</a>
-		<a href="">Profil</a>
-		<a href="">Log out</a>
-	</div>
-	<div>
-		<div>
-			Hai,<?php echo $_SESSION['nama'] ?> <br>
-			Selamat Datang di Virtual Marathon 2021
-			<!-- running symbol -->
+	<head>
+		<title>Home Peserta</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<Link href="view/css/style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<ul>
+			<li><a class="fa fa-home" href="homepage"></a></li>
+			<li><a href="homepage">Home</a></li>
+			<li><a class="fa fa-line-chart" href="progress"></a></li>
+			<li><a href="progress">Progress</a></li>
+			<li><a class="fa fa-exchange" href="transaksi"></a></li>
+			<li><a href="transaksi">Transaksi</a></li>
+			<li><a href="medali"><img src="assets/mendali.png" width="18" height="18"></a></li>
+			<li><a href="medali">Medali</a></li>
+			<li><a class="fa fa-user-circle-o" href="profile"></a></li>
+			<li><a href="profile">Profil</a></li>
+			<li><a class="fa fa-sign-out" href="#"></a></li>
+			<li><a href="#">Log out</a></li>
+		</ul>
+		<div class="w3-card-0">
+			<div class="w3-row">
+			    <div class="w3-third w3-left">
+			      	<h3>Halo, <?php echo $_SESSION['nama'] ?></h3>
+					<h1>Selamat Datang di</h1>
+					<h1>Virtual Marathon 2021</h1>
+			    </div>
+			    <div class="w3-third w3-right w3-margin-top">
+			      	<img src="assets/lari.png">
+			    </div>
+			</div>
+			<div class="w3-row tengah">
+			    <div class=" w3-left pojok">
+			      	<i class='fa fa-building'><a href="#"> About us</a></i>
+			    </div>
+			    <div class="w3-third w3-center">
+			      	<i class='fa fa-home'><a href="homepage"> Home</a></i>
+			    </div>
+			    <div class="w3-third w3-center">
+			      	<i class='fa fa-road'><a href="tracklist"> Track</a></i>
+			    </div>
+			    <div class="w3-right pojok">
+			      	<i class='fa fa-users'><a href="#"> Testimoni</a></i>
+			    </div> 
+			</div>
+			<div class="row">
+			    <div class="column">
+				    <div class="card test">
+				      	<a href="#"><i class='fa fa-question-circle'></i></a>
+				      	<h3>Apa itu Virtual</h3>
+				      	<h3>Marathon?</h3>
+				    </div>
+				</div>
+				<div class="column">
+				    <div class="card test1">
+				      	<a href="#"><i class='fa fa-file-text'></i></a>
+				      	<h3>Daftar Sekarang!</h3>
+				      	<h3></h3>
+				    </div>
+				</div>
+				  
+				<div class="column">
+				    <div class="card test">
+				      	<a href="#"><i class='fa fa-smile-o'></i></a>
+				      	<h3>Manfaat Ikut</h3>
+				      	<h3>Virtual Marathon</h3>
+				    </div>
+				</div>
+			</div>
 		</div>
-		<div class="horizontal_nav_bar_admin">
-			<a href="">About Us</a>
-			<a href="">Home</a>
-			<a href="">Track</a>
-			<a href="">Testimoni</a>
-		</div>
-		<div>
-			<a href="">Apa itu Virtual Marathon?</a>
-		</div>
-		<div>
-			<a href="tracklist">Daftar Sekarang!</a>
-		</div>
-		<div>
-			<a href="">Manfaat Ikut Virtual Marathon</a>
-		</div>
-	</div>
-</body>
+	</body>
 </html>

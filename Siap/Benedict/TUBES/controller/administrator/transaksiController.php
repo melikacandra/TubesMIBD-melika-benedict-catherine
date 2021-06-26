@@ -25,15 +25,11 @@ class TransaksiController {
 
 		if (isset($_SESSION['idPerson'])) {
 			$query = "
-				SELECT transaksi.tgl_transaksi, HimpunanTransaksi.nama, HimpunanTransaksi.harga, HimpunanTransaksi.tema, transaksi.bukti_transaksi, transaksi.status_verifikasi, transaksi.keterangan
-				FROM transaksi INNER JOIN (
-					SELECT HimpunanTrack.idPerson, HimpunanTrack.nama, HimpunanTrack.idTrack, track.harga, track.tema
-					FROM track INNER JOIN (
-						SELECT person.idPerson, person.nama, jalan.idTrack
-						FROM person INNER JOIN jalan ON person.idPerson = jalan.idPerson
-					) AS HimpunanTrack ON track.idTrack = HimpunanTrack.idTrack
-				) AS HimpunanTransaksi ON transaksi.idPerson = HimpunanTransaksi.idPerson";
 
+				SELECT transaksi.tgl_transaksi, person.nama, track.harga, track.tema, transaksi.bukti_transaksi, transaksi.status_verifikasi, transaksi.keterangan
+				FROM person INNER JOIN transaksi ON person.idPerson = transaksi.idPerson INNER JOIN akses ON transaksi.idTransaksi = akses.idTransaksi INNER JOIN track ON akses.idTrack = track.idTrack WHERE transaksi.status_verifikasi != 'tidak valid'";
+
+				
 			$query_result = $this->db->executeSelectQuery($query);
 
 			return View::createView('administrator/daftarTransaksi.php', ["query_result" => $query_result]);

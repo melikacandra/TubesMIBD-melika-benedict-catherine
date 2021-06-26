@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<Link href="view/css/style.css" type="text/css" rel="stylesheet">
+		<Link href="../css/style.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
 		<ul>
@@ -27,35 +27,9 @@
 			<h1>Track</h1>
 		</div>
 		<br>
-		<div class="tracklist">
-			<form method="GET" action="searchtrack">
-				<input type="text" id="myInput" name="input_search" placeholder="Cari Track Baru">
-				<button type="submit">Cari</button>
-			</form>
-			<br><br>
-			<table>
-			<?php foreach ($query_result as $key => $value): ?>
-				<?php if (fmod($key, 2) == 0): ?>
-					<tr>
-				<?php endif; ?>
-					<td>
-						<a href="trackoption?tema=<?php echo $value['tema'] ?>">
-							<div>
-								<img src="images/<?php echo $value['gambar'] ?>">
-								<?php echo $value["tema"]?>,
-								<?php echo $value["region"]?>
-							</div>
-						</a>
-					</td>
-				<?php if (fmod($key, 2) == 1): ?>
-					</tr>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</table>
-		</div>
-		
-
-		<!-- <div class="row">
+		<input type="text" id="myInput" placeholder="Cari Track Baru">
+		<br><br>
+		<div class="row">
 		  	<div class="column satu">
 		  		<div class="card">
 		  			<a href="trackOption1.php">
@@ -99,7 +73,7 @@
 					</a>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<br><br>
 	</body>
 </html>

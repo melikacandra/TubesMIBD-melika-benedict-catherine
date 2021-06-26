@@ -121,3 +121,209 @@ textarea {
 .horizontal_nav_bar_admin_data_transaksi li a:hover {
 	background-color: #111;
 }
+
+body {
+  margin: 0;
+  background-color: #9fc5f8;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 7%;
+  background-color: #073763;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+.fa-sign-in{
+  padding-top: 15cm;
+  padding-left: 30px;
+  font-size: 20px;
+}
+
+.w3-card-0{
+  margin-left: 10%;
+  width: 85%;
+  color: white;
+}
+
+.w3-row{
+  background-color: #073763;
+  padding-left: 6px;
+  margin-bottom: 20px;
+}
+
+.w3-third h1{
+  color: #f1c232;
+}
+
+.w3-right img{
+  width: 130px;
+  padding-top: 15px;
+}
+
+.tengah {
+  font-size: 20px;
+  background-color: #2b78e4;
+}
+
+i a{
+  text-decoration: none;
+}
+
+.pojok{
+  padding-left: 0.5cm;
+  padding-right: 0.5cm;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 20px;
+}
+
+.row {
+  margin: 0 -5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+  background-color: #735;
+}
+
+.column .card i {
+  font-size: 80px;
+}
+
+.test{
+  background-color: #085394;
+}
+
+.test a{
+  color: #ff9900;
+}
+
+.test1{
+   background-color: #ff9900;
+   font-size: 84px;
+}
+
+.test1 {
+   color: #085394;
+}
+
+.tracklist {
+	margin-left: 150px;
+}
+
+.sebelah{
+  margin-left: 7%;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  background-color: #2b78e4;
+}
+
+h1{
+  display: inline-flex;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.sebelah .fa-road{
+  font-size: 40px;
+  color: white;
+}
+
+
+/*isinya yang ditengah*/
+.main {
+  float: left;
+  width: 40%;
+  height: 1.5cm;
+  text-align: center;
+  margin:2% 5% 10% 13%;
+  background-color: #073763;
+  color: #f1c232;
+}
+
+.isi{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: left;
+}
+
+.right {
+  background-color: #073763;
+  margin-top: 2%;
+  float: left;
+  width: 30%;
+  text-align: center;
+  color: white;
+}
+
+.isi2{
+  background-color: #9fc5f8;
+}
+
+.isi2 img{
+  width: 60%;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 2.2cm;
+    width: 60%;
+    background-color: #2b78e4;
+    color: #f1c232;
+    padding: 10px;
+}
+
+td:first-child {
+    border-right: 1px solid black;
+}
+
+td{
+  padding: 10px;
+}
+
+.isi2 button{
+  background-color: #660000;
+  color: white;
+  width: 25%;
+  height: 40px;
+  margin-left: 80%; 
+}
+
+.bawah{
+  margin-top: 30%;
+  margin-left: 40%;
+}
+
+.bawah button{
+  width: 30%;
+  height: 60px;
+  background-color: red;
+  color: white;
+  font-size: 30px;
+}

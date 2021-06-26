@@ -25,15 +25,12 @@ class MedaliController {
 
 		if (isset($_SESSION['idPerson'])) {
 			$query = "
-				SELECT HimpunanTrack.idMedali, HimpunanTrack.tgl_perolehan, HimpunanTrack.nama, track.tema, HimpunanTrack.durasi_tempuh, HimpunanTrack.alamat, HimpunanTrack.status_kirim
-				FROM track INNER JOIN (
-					SELECT medali.idMedali, medali.tgl_perolehan, medali.durasi_tempuh, person.nama, person.alamat, medali.status_kirim, medali.idTrack
-					FROM medali INNER JOIN person ON medali.idPerson = person.idPerson
-				) AS HimpunanTrack ON track.idTrack = HimpunanTrack.idTrack";
+				SELECT track.tema, track.region, medali.durasi_tempuh, medali.status_kirim
+				FROM track INNER JOIN medali ON track.idTrack = medali.idTrack";
 
 			$query_result = $this->db->executeSelectQuery($query);
 
-			return View::createView('administrator/daftarMedali.php', ["query_result" => $query_result]);
+			return View::createView('peserta/medali.php', ["query_result" => $query_result]);
 		}
 		else {
 			header("Location: login");

@@ -31,7 +31,7 @@
 
 		<table width="100%">
 			<tr>
-				<th>IdPeserta</th>
+				<th>No.</th>
 				<th>Nama</th>
 				<th>Track</th>
 				<th>Progress</th>
@@ -41,19 +41,20 @@
 			</tr>
 			<?php foreach ($query_result as $key => $value): ?>
 			<tr>
-				<td><?php echo $value["idPerson"] ?></td>
+				<td><?php echo ++$key ?></td>
+				<td><?php echo $value["tgl_perolehan"] ?></td>
 				<td><?php echo $value["nama"] ?></td>
 				<td><?php echo $value["tema"] ?></td>
-				<td><?php echo $value["progress"] ?>%</td>
-				<td><?php echo $value["waktu_mulai"] ?></td>
-				<td><?php echo $value["waktu_selesai"] ?></td>
-				<td><?php echo $value["status_selesai"] //if ya symbol checklist, else symbol jam ?></td>
+				<td><?php echo $value["durasi_tempuh"] ?></td>
+				<td><?php echo $value["alamat"] ?></td>
+				<td><?php echo $value["status_kirim"] ?></td>
 			</tr>
 			<?php endforeach; ?>
 		</table>
-		Keterangan:<br>
-		Track Sudah Diselesaikan<br>
-		Track Belum Diselesaikan<br>
+		<strong>Keterangan:</strong><br>
+		<!--symbol jam pasir-->Medali sedang dalam proses pengepakan
+		<!--symbol kirim-->Medali sudah dikirim
+		<!--symbol checklist-->Medali sudah diterima
 	</div>
 </body>
 </html>

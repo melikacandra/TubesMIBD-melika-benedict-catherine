@@ -29,9 +29,9 @@
 	<div class="admin_profile_content">
 		<h2>Daftar Peserta</h2>
 
-		<table width="50%">
+		<table width="100%">
 			<tr>
-				<th>IdPeserta</th>
+				<th>No.</th>
 				<th>Nama</th>
 				<th>Track</th>
 				<th>Progress</th>
@@ -41,7 +41,7 @@
 			</tr>
 			<?php foreach ($query_result as $key => $value): ?>
 			<tr>
-				<td><?php echo $value["idPerson"] ?></td>
+				<td><?php echo ++$key ?></td>
 				<td><?php echo $value["nama"] ?></td>
 				<td><?php echo $value["tema"] ?></td>
 				<td><?php echo $value["progress"] ?>%</td>

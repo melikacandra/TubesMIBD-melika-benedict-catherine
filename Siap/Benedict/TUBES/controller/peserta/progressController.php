@@ -3,7 +3,7 @@
 require_once "controller/services/mysqlDB.php";
 require_once "controller/services/view.php";
 
-class MedaliController {
+class ProgressController {
 
 	protected $db;
 
@@ -21,19 +21,16 @@ class MedaliController {
 		
 	}
 
-	public function show_medali() {
+	public function show_progress() {
 
 		if (isset($_SESSION['idPerson'])) {
 			$query = "
-				SELECT HimpunanTrack.idMedali, HimpunanTrack.tgl_perolehan, HimpunanTrack.nama, track.tema, HimpunanTrack.durasi_tempuh, HimpunanTrack.alamat, HimpunanTrack.status_kirim
-				FROM track INNER JOIN (
-					SELECT medali.idMedali, medali.tgl_perolehan, medali.durasi_tempuh, person.nama, person.alamat, medali.status_kirim, medali.idTrack
-					FROM medali INNER JOIN person ON medali.idPerson = person.idPerson
-				) AS HimpunanTrack ON track.idTrack = HimpunanTrack.idTrack";
+				SELECT jalan.jarak_tempuh, jalan.progress, track.tema, track.region, track.gambar
+				FROM jalan INNER JOIN track ON jalan.idTrack = track.idTrack";
 
 			$query_result = $this->db->executeSelectQuery($query);
 
-			return View::createView('administrator/daftarMedali.php', ["query_result" => $query_result]);
+			return View::createView('peserta/progress.php', ["query_result" => $query_result]);
 		}
 		else {
 			header("Location: login");
